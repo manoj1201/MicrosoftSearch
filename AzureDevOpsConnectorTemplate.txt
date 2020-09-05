@@ -1,0 +1,149 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "https://static.thenounproject.com/png/396626-200.png",
+                                    "horizontalAlignment": "Left",
+                                    "size": "Small",
+                                    "height": "40px"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "[{Title}]({URL})",
+                                    "size": "Medium",
+                                    "weight": "Bolder",
+                                    "color": "Dark"
+                                },
+                                {
+                                    "type": "ColumnSet",
+                                    "columns": [
+                                        {
+                                            "type": "Column",
+                                            "width": "70px",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Status",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Start date",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "stretch",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{State}",
+                                                    "weight": "Bolder",
+                                                    "color": "{if(State =='Done', 'good', if(State =='To Do', 'attention', 'warning'))}"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{{DATE({StartDate}, SHORT)}}"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "70px",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Priority",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Due Date",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "stretch",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{Priority}"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{{DATE({TargetDate}, SHORT)}}"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "70px",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Tag",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "Closed date",
+                                                    "$when": "{State =='Done'}",
+                                                    "color": "Dark",
+                                                    "weight": "Bolder"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Column",
+                                            "width": "stretch",
+                                            "items": [
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{Tags}"
+                                                },
+                                                {
+                                                    "type": "TextBlock",
+                                                    "text": "{{DATE({FinishDate}, SHORT)}}",
+                                                    "$when": "{State =='Done'}"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
