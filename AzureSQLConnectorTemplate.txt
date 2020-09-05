@@ -1,0 +1,105 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://camo.githubusercontent.com/52ff0de12be2fd52f89e1e191f2efc316f3c2df1/687474703a2f2f69636f6e732e69636f6e617263686976652e636f6d2f69636f6e732f69636f6e73382f616e64726f69642f3531322f5472616e73706f72742d416972706c616e652d54616b656f66662d69636f6e2e706e67",
+                            "horizontalAlignment": "Center",
+                            "height": "40px"
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Flight Name",
+                            "weight": "Bolder",
+                            "color": "Dark",
+                            "horizontalAlignment": "Left"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Source",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder",
+                            "color": "Dark"
+                        }
+                    ],
+                    "spacing": "Medium"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{FlightName}",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Left"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{SourcePointAirportCountry}",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Flight Status",
+                            "weight": "Bolder",
+                            "color": "Dark"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Destination",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder",
+                            "color": "Dark"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "{FlightStatus}",
+                            "weight": "Bolder",
+                            "horizontalAlignment": "Left",
+                            "color": "{if(FlightStatus=='OnTime', 'good', if(FlightStatus=='Delayed', 'warning', 'attention'))}"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "{DestinationAirportCountry}",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
+
