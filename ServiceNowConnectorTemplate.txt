@@ -1,0 +1,118 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "[{shortdescription}]({AccessUrl})",
+                    "weight": "Bolder",
+                    "color": "Dark",
+                    "size": "Medium",
+                    "maxLines": 3
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "{PreviewContent}",
+                    "wrap": true,
+                    "maxLines": 6,
+                    "weight": "Bolder"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Number",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder",
+                                    "color": "Dark"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Knowledge Base",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder",
+                                    "color": "Dark"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "{number}",
+                                    "weight": "Bolder"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "{kbknowledgebase}",
+                                    "weight": "Bolder",
+                                    "spacing": "Small",
+                                    "maxLines": 3,
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Author",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder",
+                                    "color": "Dark"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Knowledge Base Category",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder",
+                                    "color": "Dark"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "{author}",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "{kbcategory}",
+                                    "wrap": true,
+                                    "maxLines": 3,
+                                    "weight": "Bolder"
+                                }
+                            ]
+                        }
+                    ],
+                    "separator": true
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
